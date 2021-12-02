@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { populateProduce } from './store/produce';
+import { populateProduce, likeProduce } from './store/produce';
 import { addToCart, updateCart } from './store/cart';
 
 import configureStore from './store';
@@ -16,6 +16,7 @@ if (process.env.NODE_ENV !== "production") {
   window.populateProduce = populateProduce;
   window.addToCart = addToCart;
   window.updateCart = updateCart;
+  window.likeProduce = likeProduce;
 }
 
 function Root() {
