@@ -23,7 +23,7 @@ function App() {
         </button>
       </nav>
       <main style={showCart ? { marginRight: '300px' } : {}} >
-        <ProduceList />
+        <ProduceList setShowCart={setShowCart}/>
       </main>
       <div
         className="sidebar"

@@ -3,7 +3,7 @@ import ProduceDetails from './ProduceDetails';
 import { getAllProduce } from '../../store/produce';
 import './ProduceList.css';
 
-function ProduceList() {
+function ProduceList({ setShowCart }) {
   // const produce = useSelector(state => state.produce);
 
   // const produceArr = Object.values(produce);
@@ -16,7 +16,7 @@ function ProduceList() {
       {!produceArr.length && <span>No produce available right now.</span>}
       <ul className="produce-list">
         {produceArr.map((produce) => (
-          <ProduceDetails key={produce.id} produce={produce} />
+          <ProduceDetails key={produce.id} produce={produce} setShowCart={setShowCart} />
         ))}
       </ul>
     </>
