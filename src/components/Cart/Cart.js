@@ -1,14 +1,14 @@
 import { useSelector, useDispatch } from 'react-redux';
 import CartItem from './CartItem';
-import { removeFromCart } from '../../store/cart';
+import { removeFromCart, getAllCart } from '../../store/cart';
 import './Cart.css';
 
 function Cart() {
-  const cart = useSelector(state => state.cart);
   const produce = useSelector(state => state.produce);
   const dispatch = useDispatch();
+  const cartArr = useSelector(getAllCart);
 
-  const cartItems = Object.values(cart)
+  const cartItems = cartArr && cartArr
     .map(item => {
       return {
         ...item,

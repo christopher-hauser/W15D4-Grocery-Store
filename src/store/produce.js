@@ -17,6 +17,8 @@ export const likeProduce = (id) => {
     }
 }
 
+export const getAllProduce = (state) => Object.values(state.produce);
+
 export default function produceReducer(state = {}, action) {
     let newState = {};
     switch (action.type) {

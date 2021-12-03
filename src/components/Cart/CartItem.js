@@ -9,7 +9,7 @@ function CartItem({ item }) {
   useEffect(() => {
     setCount(item.count);
     if (item.count === 0) dispatch(removeFromCart(item.id));
-  }, [item.count]);
+  }, [item.count, dispatch, item.id]);
 
   return (
     <li className="cart-item">
